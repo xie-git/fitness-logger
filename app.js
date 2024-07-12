@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log(`Invalid Date: ${row.Date}`); // Log invalid dates
                     return;
                 }
-                const dateString = date.toISOString().split('T')[0];asdf
+                const dateString = date.toISOString().split('T')[0];a
 
                 if (!gymVisitsPerDay[dateString]) {
                     gymVisitsPerDay[dateString] = 0;
