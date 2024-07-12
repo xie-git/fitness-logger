@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         const counts = Object.values(gymVisitsPerMonth);
 
-        return { labels, counts };
+        return { labels, counts, totalGymSessions: Object.keys(gymVisitsPerDay).length };
     }
 
     // Process data to count workout types per day
@@ -189,12 +189,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Display total gym sessions
+    function displayTotalGymSessions(total) {
+        const totalSessionsDiv = document.getElementById('totalSessions');
+        totalSessionsDiv.textContent = `Total Gym Sessions: ${total}`;
+    }
+
     // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
 
-        // Process data for the first chart
-        const { labels, counts } = processGymVisitsPerMonth(parsedData);
+        // Process data for the first chart and total sessions counter
+        const { labels, counts, totalGymSessions } = processGymVisitsPerMonth(parsedData);
+        displayTotalGymSessions(totalGymSessions);
         createWorkoutCountChart(labels, counts);
 
         // Process data for the second chart
