@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return parsedData.data;
     }
 
-    // Process data to count gym visits per month
+    // Process data to count gym visits per month and workout types
     function processData(data) {
         const gymVisitsPerDay = {};
         const workoutTypeCounts = { Push: 0, Pull: 0, Legs: 0 };
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         display: true,
                         text: 'Gym Sessions per Month',
                         font: {
-                            size: 20
+                            size: 10 // Adjust the font size here
                         }
                     }
                 }
@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                     title: {
                         display: true,
-                        text: 'Push, Pull, and Leg Days Count',
+                        text: 'Exercise Day Count',
                         font: {
-                            size: 20
+                            size: 10 // Adjust the font size here
                         }
                     }
                 }
@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
         const { labels, counts, workoutTypeCounts } = processData(parsedData);
+        console.log(labels, counts, workoutTypeCounts); // Debugging line
         createWorkoutCountChart(labels, counts);
         createWorkoutTypeChart(workoutTypeCounts);
     });
