@@ -1,3 +1,5 @@
+// dataProcessing.js
+
 async function fetchCSVData() {
     const response = await fetch('https://xie-fitness-logger-web.s3.amazonaws.com/combined_data_cleaned.csv');
     const data = await response.text();
@@ -79,3 +81,9 @@ function displayCounters(stats) {
         </table>
     `;
 }
+
+// Attach functions to the window object
+window.fetchCSVData = fetchCSVData;
+window.parseCSV = parseCSV;
+window.processData = processData;
+window.displayCounters = displayCounters;

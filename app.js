@@ -130,11 +130,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
-
+    
         // Process data for the counters and charts
         const { labels, counts, totalGymSessions, workoutTypeCounts, gymVisitsPerMonth } = processData(parsedData);
         displayCounters({ totalGymSessions, workoutTypeCounts, gymVisitsPerMonth });
         createWorkoutCountChart(labels, counts);
         createWorkoutTypeChart(workoutTypeCounts);
     });
-});
