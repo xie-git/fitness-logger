@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const gymVisitsPerDay = {};
 
         data.forEach((row, index) => {
-            console.log(`Processing row ${sdfindex}:`, row); // Log each row
+            console.log(`Processing row ${index}:`, row); // Log each row
             if (row.Date) {
                 const date = new Date(row.Date);
                 if (isNaN(date.getTime())) {
                     console.log(`Invalid Date: ${row.Date}`); // Log invalid dates
                     return;
                 }
-                const dateString = date.toISOString().split( 'T')[0];
+                const dateString = date.toISOString().split('T')[0];
 
                 if (!gymVisitsPerDay[dateString]) {
                     gymVisitsPerDay[dateString] = 0;
