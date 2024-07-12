@@ -53,6 +53,25 @@ function processData(data) {
     return { labels, counts, totalGymSessions: Object.keys(gymVisitsPerDay).length, workoutTypeCounts, gymVisitsPerMonth };
 }
 
+function processMuscleGroupData(data) {
+    const muscleGroupCounts = {};
+
+    data.forEach((row) => {
+        if (row['Muscle Group']) {
+            const muscleGroup = row['Muscle Group'];
+            if (!muscleGroupCounts[muscleGroup]) {
+                muscleGroupCounts[muscleGroup] = 0;
+            }
+            muscleGroupCounts[muscleGroup]++;
+        }
+    });
+
+    const labels = Object.keys(muscleGroupCounts);
+    const counts = Object.values(muscleGroupCounts);
+
+    return { labels, counts };
+}
+
 function displayCounters(stats) {
     const countersDiv = document.getElementById('counters');
 
@@ -86,4 +105,5 @@ function displayCounters(stats) {
 window.fetchCSVData = fetchCSVData;
 window.parseCSV = parseCSV;
 window.processData = processData;
+window.processMuscleGroupData = processMuscleGroupData;
 window.displayCounters = displayCounters;

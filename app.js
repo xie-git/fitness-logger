@@ -127,6 +127,69 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function createMuscleGroupChart(labels, counts) {
+        const ctx = document.getElementById('muscleGroupChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Total Sets per Muscle Group',
+                    data: counts,
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: { 
+                        grid: { 
+                            display: false // Remove the grid lines on the x-axis
+                        }
+                    },
+                    y: { 
+                        beginAtZero: true,
+                        grid: { 
+                            display: false // Remove the grid lines on the y-axis
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false // Optional: Hide the legend
+                    },
+                    tooltip: {
+                        enabled: true // Optional: Enable tooltips
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        formatter: function(value) {
+                            return value;
+                        },
+                        color: 'black',
+                        font: {
+                            weight: 'bold',
+                            size: 10 // Set font size to 10
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Total Sets per Muscle Group',
+                        font: {
+                            size: 10, // Set font size to 10
+                            color: 'black', // Set font color to black
+                            align: 'start' // Align title to the left
+                        }
+                    }
+                }
+            },
+            plugins: [ChartDataLabels]
+        });
+    }
+
     // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
@@ -136,5 +199,9 @@ document.addEventListener('DOMContentLoaded', function () {
         displayCounters({ totalGymSessions, workoutTypeCounts, gymVisitsPerMonth });
         createWorkoutCountChart(labels, counts);
         createWorkoutTypeChart(workoutTypeCounts);
+
+        // Process and create muscle group chart
+        const { labels: muscleGroupLabels, counts: muscleGroupCounts } = processMuscleGroupData(parsedData);
+        createMuscleGroupChart(muscleGroupLabels, muscleGroupCounts);
     });
 });
