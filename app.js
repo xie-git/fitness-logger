@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Parse CSV data
     function parseCSV(data) {
         const parsedData = Papa.parse(data, { header: true });
-        console.log('Parsed Data:', parsedData.data); // Log the parsed data
         return parsedData.data;
     }
 
