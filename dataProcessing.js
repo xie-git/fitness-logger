@@ -66,11 +66,19 @@ function processMuscleGroupData(data) {
         }
     });
 
-    const labels = Object.keys(muscleGroupCounts);
-    const counts = Object.values(muscleGroupCounts);
+    // Convert the muscle group counts object into an array of [muscleGroup, count] pairs
+    const muscleGroupArray = Object.entries(muscleGroupCounts);
+
+    // Sort the array by count in descending order
+    muscleGroupArray.sort((a, b) => b[1] - a[0]);
+
+    // Separate the sorted array back into labels and counts
+    const labels = muscleGroupArray.map(item => item[0]);
+    const counts = muscleGroupArray.map(item => item[1]);
 
     return { labels, counts };
 }
+
 
 function displayCounters(stats) {
     const countersDiv = document.getElementById('counters');
