@@ -15,22 +15,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Process data to count gym visits per month
     function processData(data) {
         const gymVisitsPerDay = {};
+        const workoutTypeCounts = { Push: 0, Pull: 0, Legs: 0 };
 
-        data.forEach((row, index) => {
+        data.forEach((row) => {
             if (row.Date) {
                 const date = new Date(row.Date);
-                if (isNaN(date.getTime())) {
-                    console.log(`Invalid Date: ${row.Date}`); // Log invalid dates
-                    return;
-                }
                 const dateString = date.toISOString().split('T')[0];
-
                 if (!gymVisitsPerDay[dateString]) {
                     gymVisitsPerDay[dateString] = 0;
                 }
                 gymVisitsPerDay[dateString]++;
-            } else {
-                console.log(`Missing Date in row ${index}`); // Log missing date
+
+                // Count workout types
+                if (row['Exercise Day']) {
+                    workoutTypeCounts[row['Exercise Day']]++;
+                }
             }
         });
 
@@ -39,39 +38,30 @@ document.addEventListener('DOMContentLoaded', function () {
         Object.keys(gymVisitsPerDay).forEach(dateString => {
             const [year, month] = dateString.split('-');
             const yearMonth = `${year}-${month}`;
-
             if (!gymVisitsPerMonth[yearMonth]) {
                 gymVisitsPerMonth[yearMonth] = 0;
             }
             gymVisitsPerMonth[yearMonth]++;
         });
 
-        const labels = Object.keys(gymVisitsPerMonth).sort();
-        const counts = labels.map(label => gymVisitsPerMonth[label]);
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const labels = Object.keys(gymVisitsPerMonth).sort().map(key => {
+            const [year, month] = key.split('-');
+            return `${monthNames[parseInt(month) - 1]} ${year}`;
+        });
+        const counts = Object.values(gymVisitsPerMonth);
 
-        console.log('Labels:', labels); // Log the labels
-        console.log('Counts:', counts); // Log the counts
-
-        return { labels, counts };
+        return { labels, counts, workoutTypeCounts };
     }
 
     // Create Chart.js chart for workout count each month
-    function createChart(labels, counts) {
+    function createWorkoutCountChart(labels, counts) {
         const ctx = document.getElementById('workoutCountChart').getContext('2d');
-    
-        // Dictionary to map month numbers to month names
-        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    
-        // Convert year-month format to month name and year
-        const formattedLabels = labels.map(label => {
-            const [year, month] = label.split('-');
-            return `${monthNames[parseInt(month) - 1]} ${year}`;
-        });
-    
+
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: formattedLabels,
+                labels: labels,
                 datasets: [{
                     label: 'Workout Days per Month',
                     data: counts,
@@ -125,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Create Chart.js chart for workout type counts
     function createWorkoutTypeChart(workoutTypeCounts) {
         const ctx = document.getElementById('workoutTypeChart').getContext('2d');
 
@@ -184,13 +175,12 @@ document.addEventListener('DOMContentLoaded', function () {
             plugins: [ChartDataLabels]
         });
     }
-    
-    
 
-    // Fetch and parse data, then process and create chart
+    // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
-        const { labels, counts } = processData(parsedData);
-        createChart(labels, counts);
+        const { labels, counts, workoutTypeCounts } = processData(parsedData);
+        createWorkoutCountChart(labels, counts);
+        createWorkoutTypeChart(workoutTypeCounts);
     });
 });
