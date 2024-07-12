@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return parsedData.data;
     }
 
-    // Process data to count gym visits per month and workout types
-    function processData(data) {
+    // Process data to count gym visits per month
+    function processGymVisitsPerMonth(data) {
         const gymVisitsPerDay = {};
-        const workoutTypeCounts = { Push: 0, Pull: 0, Legs: 0 };
 
         data.forEach((row) => {
             if (row.Date) {
@@ -25,11 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     gymVisitsPerDay[dateString] = 0;
                 }
                 gymVisitsPerDay[dateString]++;
-
-                // Count workout types
-                if (row['Exercise Day']) {
-                    workoutTypeCounts[row['Exercise Day']]++;
-                }
             }
         });
 
@@ -51,7 +45,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         const counts = Object.values(gymVisitsPerMonth);
 
-        return { labels, counts, workoutTypeCounts };
+        return { labels, counts };
+    }
+
+    // Process data to count workout types per day
+    function processWorkoutTypesPerDay(data) {
+        const workoutTypeCounts = { Push: 0, Pull: 0, Legs: 0 };
+        const uniqueDays = new Set();
+
+        data.forEach((row) => {
+            if (row.Date && row['Exercise Day']) {
+                const date = new Date(row.Date);
+                const dateString = date.toISOString().split('T')[0];
+                if (!uniqueDays.has(dateString)) {
+                    uniqueDays.add(dateString);
+                    workoutTypeCounts[row['Exercise Day']]++;
+                }
+            }
+        });
+
+        return workoutTypeCounts;
     }
 
     // Create Chart.js chart for workout count each month
@@ -106,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         display: true,
                         text: 'Gym Sessions per Month',
                         font: {
-                            size: 10 // Adjust the font size here
+                            size: 24 // Adjust the font size here
                         }
                     }
                 }
@@ -165,9 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                     title: {
                         display: true,
-                        text: 'Exercise Day Count',
+                        text: 'Push, Pull, and Leg Days Count',
                         font: {
-                            size: 10 // Adjust the font size here
+                            size: 24 // Adjust the font size here
                         }
                     }
                 }
@@ -179,9 +192,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
-        const { labels, counts, workoutTypeCounts } = processData(parsedData);
-        console.log(labels, counts, workoutTypeCounts); // Debugging line
+
+        // Process data for the first chart
+        const { labels, counts } = processGymVisitsPerMonth(parsedData);
         createWorkoutCountChart(labels, counts);
+
+        // Process data for the second chart
+        const workoutTypeCounts = processWorkoutTypesPerDay(parsedData);
+        console.log('Workout Type Counts:', workoutTypeCounts); // Log the values for the second chart
         createWorkoutTypeChart(workoutTypeCounts);
     });
 });
