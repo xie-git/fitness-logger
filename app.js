@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     async function fetchCSVData() {
         const response = await fetch('https://xie-fitness-logger-web.s3.amazonaws.com/combined_data_cleaned.csv');
         const data = await response.text();
-        console.log('CSV Data:', data); // Log the raw CSV data
         return data;
     }
 
