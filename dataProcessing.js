@@ -70,7 +70,7 @@ function processMuscleGroupData(data) {
     const muscleGroupArray = Object.entries(muscleGroupCounts);
 
     // Sort the array by count in descending order
-    muscleGroupArray.sort((a, b) => b[1] - a[0]);
+    muscleGroupArray.sort((a, b) => b[1] - a[1]);
 
     // Separate the sorted array back into labels and counts
     const labels = muscleGroupArray.map(item => item[0]);
@@ -78,7 +78,6 @@ function processMuscleGroupData(data) {
 
     return { labels, counts };
 }
-
 
 function displayCounters(stats) {
     const countersDiv = document.getElementById('counters');
