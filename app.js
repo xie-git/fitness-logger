@@ -281,6 +281,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Process and create muscle group charts by month
         const muscleGroupDataByMonth = processMuscleGroupDataByMonth(parsedData);
-        createMuscleGroupChartByMonth(muscleGroupDataByMonth);
+        createMuscleGroupChartByMonth(muscleGroupDataByMonth); // Add this line to call the function
     });
 });
