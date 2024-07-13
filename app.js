@@ -129,7 +129,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createMuscleGroupChart(labels, counts) {
         const ctx = document.getElementById('muscleGroupChart').getContext('2d');
-
+    
+        const colors = {
+            'Chest': 'rgba(255, 99, 132, 0.2)',
+            'Back': 'rgba(54, 162, 235, 0.2)',
+            'Legs': 'rgba(75, 192, 192, 0.2)',
+            'Arms': 'rgba(255, 206, 86, 0.2)',
+            'Shoulders': 'rgba(153, 102, 255, 0.2)',
+            'Abs': 'rgba(255, 159, 64, 0.2)',
+            'Other': 'rgba(201, 203, 207, 0.2)'
+        };
+    
+        const borderColors = {
+            'Chest': 'rgba(255, 99, 132, 1)',
+            'Back': 'rgba(54, 162, 235, 1)',
+            'Legs': 'rgba(75, 192, 192, 1)',
+            'Arms': 'rgba(255, 206, 86, 1)',
+            'Shoulders': 'rgba(153, 102, 255, 1)',
+            'Abs': 'rgba(255, 159, 64, 1)',
+            'Other': 'rgba(201, 203, 207, 1)'
+        };
+    
         new Chart(ctx, {
             type: 'bar',
             data: {
@@ -137,8 +157,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 datasets: [{
                     label: 'Total Sets per Muscle Group',
                     data: counts,
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
+                    backgroundColor: labels.map(label => colors[label] || colors['Other']),
+                    borderColor: labels.map(label => borderColors[label] || borderColors['Other']),
                     borderWidth: 1
                 }]
             },
@@ -193,17 +213,37 @@ document.addEventListener('DOMContentLoaded', function () {
     function createMuscleGroupChartByMonth(muscleGroupDataByMonth) {
         const container = document.getElementById('muscleGroupChartsContainer');
         container.innerHTML = '';
-
+    
+        const colors = {
+            'Chest': 'rgba(255, 99, 132, 0.2)',
+            'Back': 'rgba(54, 162, 235, 0.2)',
+            'Legs': 'rgba(75, 192, 192, 0.2)',
+            'Arms': 'rgba(255, 206, 86, 0.2)',
+            'Shoulders': 'rgba(153, 102, 255, 0.2)',
+            'Abs': 'rgba(255, 159, 64, 0.2)',
+            'Other': 'rgba(201, 203, 207, 0.2)'
+        };
+    
+        const borderColors = {
+            'Chest': 'rgba(255, 99, 132, 1)',
+            'Back': 'rgba(54, 162, 235, 1)',
+            'Legs': 'rgba(75, 192, 192, 1)',
+            'Arms': 'rgba(255, 206, 86, 1)',
+            'Shoulders': 'rgba(153, 102, 255, 1)',
+            'Abs': 'rgba(255, 159, 64, 1)',
+            'Other': 'rgba(201, 203, 207, 1)'
+        };
+    
         Object.keys(muscleGroupDataByMonth).forEach(yearMonth => {
             const { labels, counts } = muscleGroupDataByMonth[yearMonth];
-
+    
             const chartContainer = document.createElement('div');
             chartContainer.className = 'chart-container';
             container.appendChild(chartContainer);
-
+    
             const canvas = document.createElement('canvas');
             chartContainer.appendChild(canvas);
-
+    
             new Chart(canvas.getContext('2d'), {
                 type: 'bar',
                 data: {
@@ -211,8 +251,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     datasets: [{
                         label: `Total Sets per Muscle Group (${yearMonth})`,
                         data: counts,
-                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                        borderColor: 'rgba(153, 102, 255, 1)',
+                        backgroundColor: labels.map(label => colors[label] || colors['Other']),
+                        borderColor: labels.map(label => borderColors[label] || borderColors['Other']),
                         borderWidth: 1
                     }]
                 },
