@@ -6,19 +6,91 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#counters {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 canvas {
-    max-width: 60%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px 0;
     max-height: 60vh;
+    margin-bottom: 20px;
+}
+
+.scroll-container .chart-container {
+    flex: 0 0 auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #counters {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    canvas {
+        max-width: 100%;
+    }
+
+    .scroll-container .chart-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #counters {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    canvas {
+        max-width: 100%;
+    }
+
+    .scroll-container .chart-container {
+        width: 100%;
+    }
 }
