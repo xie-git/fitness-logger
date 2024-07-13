@@ -79,6 +79,38 @@ function processMuscleGroupData(data) {
     return { labels, counts };
 }
 
+function processMuscleGroupDataByMonth(data) {
+    const muscleGroupCountsByMonth = {};
+
+    data.forEach((row) => {
+        if (row['Date'] && row['Muscle Group']) {
+            const date = new Date(row['Date']);
+            const yearMonth = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+            const muscleGroup = row['Muscle Group'];
+
+            if (!muscleGroupCountsByMonth[yearMonth]) {
+                muscleGroupCountsByMonth[yearMonth] = {};
+            }
+            if (!muscleGroupCountsByMonth[yearMonth][muscleGroup]) {
+                muscleGroupCountsByMonth[yearMonth][muscleGroup] = 0;
+            }
+            muscleGroupCountsByMonth[yearMonth][muscleGroup]++;
+        }
+    });
+
+    const result = {};
+
+    Object.keys(muscleGroupCountsByMonth).forEach(yearMonth => {
+        const muscleGroupCounts = muscleGroupCountsByMonth[yearMonth];
+        const sortedMuscleGroupCounts = Object.entries(muscleGroupCounts).sort((a, b) => b[1] - a[1]);
+        const labels = sortedMuscleGroupCounts.map(item => item[0]);
+        const counts = sortedMuscleGroupCounts.map(item => item[1]);
+        result[yearMonth] = { labels, counts };
+    });
+
+    return result;
+}
+
 function displayCounters(stats) {
     const countersDiv = document.getElementById('counters');
 
@@ -113,4 +145,5 @@ window.fetchCSVData = fetchCSVData;
 window.parseCSV = parseCSV;
 window.processData = processData;
 window.processMuscleGroupData = processMuscleGroupData;
+window.processMuscleGroupDataByMonth = processMuscleGroupDataByMonth;
 window.displayCounters = displayCounters;

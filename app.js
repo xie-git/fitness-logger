@@ -190,6 +190,81 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function createMuscleGroupChartByMonth(muscleGroupDataByMonth) {
+        const container = document.getElementById('muscleGroupChartsContainer');
+        container.innerHTML = '';
+
+        Object.keys(muscleGroupDataByMonth).forEach(yearMonth => {
+            const { labels, counts } = muscleGroupDataByMonth[yearMonth];
+
+            const chartContainer = document.createElement('div');
+            chartContainer.className = 'chart-container';
+            container.appendChild(chartContainer);
+
+            const canvas = document.createElement('canvas');
+            chartContainer.appendChild(canvas);
+
+            new Chart(canvas.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: `Total Sets per Muscle Group (${yearMonth})`,
+                        data: counts,
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: { 
+                            grid: { 
+                                display: false // Remove the grid lines on the x-axis
+                            }
+                        },
+                        y: { 
+                            beginAtZero: true,
+                            grid: { 
+                                display: false // Remove the grid lines on the y-axis
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false // Optional: Hide the legend
+                        },
+                        tooltip: {
+                            enabled: true // Optional: Enable tooltips
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'top',
+                            formatter: function(value) {
+                                return value;
+                            },
+                            color: 'black',
+                            font: {
+                                weight: 'bold',
+                                size: 10 // Set font size to 10
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: `Total Sets per Muscle Group (${yearMonth})`,
+                            font: {
+                                size: 10, // Set font size to 10
+                                color: 'black', // Set font color to black
+                                align: 'start' // Align title to the left
+                            }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        });
+    }
+
     // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
         const parsedData = parseCSV(data);
@@ -203,5 +278,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Process and create muscle group chart
         const { labels: muscleGroupLabels, counts: muscleGroupCounts } = processMuscleGroupData(parsedData);
         createMuscleGroupChart(muscleGroupLabels, muscleGroupCounts);
+
+        // Process and create muscle group charts by month
+        const muscleGroupDataByMonth = processMuscleGroupDataByMonth(parsedData);
+        createMuscleGroupChartByMonth(muscleGroupDataByMonth);
     });
 });
