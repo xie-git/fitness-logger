@@ -1,0 +1,461 @@
+Date,Exercise Day,Exercise,Type of Exercise,Weight (lbs),Reps,Order of Exercise,Muscle Group,Notes,Specific Muscle
+2024-04-04,Push,Incline bench,Compound,115,6,1,Chest,,Pectoral
+2024-04-04,Push,Incline bench,Compound,115,6,2,Chest,,Pectoral
+2024-04-04,Push,OHP,Compound,75,8,3,Shoulders,,Shoulders
+2024-04-04,Push,OHP,Compound,75,9,4,Shoulders,,Shoulders
+2024-04-04,Push,Chest Press,Isolation,20,11,5,Chest,,Pectoral
+2024-04-04,Push,Chest Press,Isolation,20,13,6,Chest,,Pectoral
+2024-04-04,Push,Triceps,Isolation,47.5,14,7,Arms,,Triceps
+2024-04-04,Push,Triceps,Isolation,47.5,14,8,Arms,,Triceps
+2024-04-05,Legs,Squat,Compound,155,8,1,Legs,,Quads
+2024-04-05,Legs,Squat,Compound,155,9,2,Legs,,Quads
+2024-04-05,Legs,RDL,Compound,145,4,3,Legs,Injury during the set,Hamstrings
+2024-04-05,Legs,Leg Extension,Isolation,105,10,4,Legs,,Quads
+2024-04-05,Legs,Leg Extension,Isolation,105,12,5,Legs,,Quads
+2024-04-05,Legs,Leg Curl,Isolation,60,7,6,Legs,,Hamstrings
+2024-04-05,Legs,Leg Curl,Isolation,60,9,7,Legs,,Hamstrings
+2024-04-06,Pull,T Bar,Compound,80,13,1,Back,,Upper Back
+2024-04-06,Pull,T Bar,Compound,80,11,2,Back,,Upper Back
+2024-04-06,Pull,Lat pulldown,Compound,115,10,3,Back,,Lats
+2024-04-06,Pull,Lat pulldown,Compound,115,11,4,Back,,Lats
+2024-04-06,Pull,Pull up,Compound,-55,8,5,Back,,Lats
+2024-04-06,Pull,Pull up,Compound,-55,8,6,Back,,Lats
+2024-04-08,Push,Bench Press,Compound,135,5,1,Chest,,Pectoral
+2024-04-08,Push,Bench Press,Compound,135,6,2,Chest,,Pectoral
+2024-04-08,Push,Incline bench,Compound,115,6,3,Chest,,Pectoral
+2024-04-08,Push,Incline bench,Compound,115,6,4,Chest,,Pectoral
+2024-04-08,Push,OHP,Compound,75,9,5,Shoulders,,Shoulders
+2024-04-08,Push,OHP,Compound,75,9,6,Shoulders,,Shoulders
+2024-04-08,Push,Triceps,Isolation,50,12,7,Arms,,Triceps
+2024-04-08,Push,Triceps,Isolation,50,13,8,Arms,,Triceps
+2024-04-09,Legs,Squat,Compound,155,6,1,Legs,,Quads
+2024-04-09,Legs,Squat,Compound,155,6,2,Legs,,Quads
+2024-04-09,Legs,RDL,Compound,155,8,3,Legs,,Hamstrings
+2024-04-09,Legs,RDL,Compound,155,8,4,Legs,,Hamstrings
+2024-04-09,Legs,Decline sit-up,Isolation,25,10,5,Core,,Unknown
+2024-04-09,Legs,Decline sit-up,Isolation,25,10,6,Core,,Unknown
+2024-04-09,Legs,Leg Extension,Isolation,105,10,7,Legs,,Quads
+2024-04-09,Legs,Leg Extension,Isolation,105,12,8,Legs,,Quads
+2024-04-09,Legs,Leg Curl,Isolation,60,8,9,Legs,,Hamstrings
+2024-04-09,Legs,Leg Curl,Isolation,60,9,10,Legs,,Hamstrings
+2024-04-09,Push,Chest Cable Press,Isolation,20,14,11,Chest,,Pectoral
+2024-04-09,Push,Chest Cable Press,Isolation,20,14,12,Chest,,Pectoral
+2024-04-09,Push,Bench Press,Compound,145,6,13,Chest,,Pectoral
+2024-04-09,Push,Bench Press,Compound,145,5,14,Chest,,Pectoral
+2024-04-09,Push,OHP,Compound,65,11,15,Shoulders,,Shoulders
+2024-04-09,Push,OHP,Compound,75,7,16,Shoulders,,Shoulders
+2024-04-09,Push,Triceps,Isolation,50,14,17,Arms,,Triceps
+2024-04-09,Push,Triceps,Isolation,50,12,18,Arms,,Triceps
+2024-04-11,Pull,T Bar,Compound,85,13,1,Back,,Upper Back
+2024-04-11,Pull,T Bar,Compound,85,12,2,Back,,Upper Back
+2024-04-11,Pull,Row,Compound,225,11,3,Back,,Upper Back
+2024-04-11,Pull,Row,Compound,225,11,4,Back,,Upper Back
+2024-04-11,Pull,Lat pulldown,Compound,115,12,5,Back,,Lats
+2024-04-11,Pull,Lat pulldown,Compound,115,10,6,Back,,Lats
+2024-04-11,Pull,Pull up,Compound,-55,-,7,Back,,Lats
+2024-04-11,Pull,Pull up,Compound,-55,-,8,Back,,Lats
+2024-04-11,Pull,Biceps,Isolation,45,21,9,Arms,,Biceps
+2024-04-11,Pull,Biceps,Isolation,45,21,10,Arms,,Biceps
+2024-04-12,Legs,Squat,Compound,155,8,1,Legs,,Quads
+2024-04-12,Legs,Squat,Compound,155,8,2,Legs,,Quads
+2024-04-12,Legs,RDL,Compound,155,8,3,Legs,,Hamstrings
+2024-04-12,Legs,RDL,Compound,155,8,4,Legs,,Hamstrings
+2024-04-12,Legs,Decline sit-up,Isolation,25,14.5,5,Core,,Unknown
+2024-04-12,Legs,Decline sit-up,Isolation,25,15,6,Core,,Unknown
+2024-04-12,Legs,Leg Extension,Isolation,60,12,7,Legs,,Quads
+2024-04-12,Legs,Leg Extension,Isolation,60,12,8,Legs,,Quads
+2024-04-12,Legs,Leg Curl,Isolation,60,10,9,Legs,,Hamstrings
+2024-04-12,Legs,Leg Curl,Isolation,60,10,10,Legs,,Hamstrings
+2024-04-14,Pull,T Bar,Compound,85,12,1,Back,,Upper Back
+2024-04-14,Pull,T Bar,Compound,85,14,2,Back,,Upper Back
+2024-04-14,Pull,Row,Compound,225,12,3,Back,,Upper Back
+2024-04-14,Pull,Row,Compound,225,12,4,Back,,Upper Back
+2024-04-14,Pull,Lat pulldown,Compound,115,12,5,Back,,Lats
+2024-04-14,Pull,Lat pulldown,Compound,115,10,6,Back,,Lats
+2024-04-14,Pull,Pull up (lat grip),Compound,-55,8,7,Back,,Lats
+2024-04-14,Pull,Pull up,Compound,-45,6,8,Back,,Lats
+2024-04-14,Pull,Biceps,Isolation,65,9,9,Arms,,Biceps
+2024-04-14,Pull,Biceps,Isolation,65,6,10,Arms,,Biceps
+2024-04-14,Pull,Biceps,Isolation,65,6,11,Arms,,Biceps
+2024-04-15,Push,Incline bench,Compound,115,7,1,Chest,,Pectoral
+2024-04-15,Push,Incline bench,Compound,115,6,2,Chest,,Pectoral
+2024-04-15,Push,OHP,Compound,75,9,3,Shoulders,,Shoulders
+2024-04-15,Push,OHP,Compound,75,9,4,Shoulders,,Shoulders
+2024-04-15,Push,Chest Press,Isolation,25,10,5,Chest,,Pectoral
+2024-04-15,Push,Chest Press,Isolation,25,10,6,Chest,,Pectoral
+2024-04-15,Push,Triceps,Isolation,50,12,7,Arms,,Triceps
+2024-04-15,Push,Triceps,Isolation,50,-,8,Arms,,Triceps
+2024-04-16,Legs,Squat,Compound,165,7,1,Legs,,Quads
+2024-04-16,Legs,Squat,Compound,165,7,2,Legs,,Quads
+2024-04-16,Legs,RDL,Compound,155,10,3,Legs,,Hamstrings
+2024-04-16,Legs,RDL,Compound,155,10,4,Legs,,Hamstrings
+2024-04-16,Legs,Leg Extension,Isolation,60,11,5,Legs,,Quads
+2024-04-16,Legs,Leg Extension,Isolation,60,13,6,Legs,,Quads
+2024-04-16,Legs,Leg Curl,Isolation,60,12,7,Legs,,Hamstrings
+2024-04-16,Legs,Leg Curl,Isolation,60,14,8,Legs,,Hamstrings
+2024-04-17,Pull,T Bar,Compound,90,14,1,Back,,Upper Back
+2024-04-17,Pull,T Bar,Compound,90,13,2,Back,,Upper Back
+2024-04-17,Pull,Row,Compound,245,12,3,Back,,Upper Back
+2024-04-17,Pull,Row,Compound,245,11,4,Back,,Upper Back
+2024-04-17,Pull,Row,Compound,80,10,5,Back,,Lower Back
+2024-04-17,Pull,Row,Compound,80,10,6,Back,,Lower Back
+2024-04-17,Pull,Pull up,Compound,-,8,7,Back,,Lats
+2024-04-18,Push,Bench Press,Compound,135,7,1,Chest,,Pectoral
+2024-04-18,Push,Bench Press,Compound,135,-,2,Chest,,Pectoral
+2024-04-18,Push,OHP,Compound,75,7,3,Shoulders,,Shoulders
+2024-04-18,Push,OHP,Compound,75,8,4,Shoulders,,Shoulders
+2024-04-18,Push,Chest Fly,Isolation,85,10,5,Chest,,Pectoral
+2024-04-18,Push,Chest Fly,Isolation,85,12,6,Chest,,Pectoral
+2024-04-18,Push,Triceps,Isolation,50,10,7,Arms,,Triceps
+2024-04-18,Push,Triceps,Isolation,50,10,8,Arms,,Triceps
+2024-04-20,Push,Incline bench,Compound,115,6,1,Chest,,Pectoral
+2024-04-20,Push,Incline bench,Compound,115,7,2,Chest,,Pectoral
+2024-04-20,Push,OHP,Compound,75,8,3,Shoulders,,Shoulders
+2024-04-20,Push,OHP,Compound,75,8,4,Shoulders,,Shoulders
+2024-04-20,Push,Triceps,Isolation,50,12,5,Arms,,Triceps
+2024-04-20,Push,Triceps,Isolation,50,12,6,Arms,,Triceps
+2024-04-22,Pull,T Bar,Compound,90,12,1,Back,,Upper Back
+2024-04-22,Pull,T Bar,Compound,90,15,2,Back,,Upper Back
+2024-04-22,Pull,Row,Compound,245,13,3,Back,,Upper Back
+2024-04-22,Pull,Row,Compound,245,15,4,Back,,Upper Back
+2024-04-22,Pull,Lat pulldown,Compound,115,10,5,Back,,Lats
+2024-04-22,Pull,Lat pulldown,Compound,115,10,6,Back,,Lats
+2024-04-22,Pull,Biceps,Isolation,45,21,7,Arms,,Biceps
+2024-04-22,Pull,Biceps,Isolation,45,21,8,Arms,,Biceps
+2024-04-23,Push,Incline bench,Compound,115,7,1,Chest,,Pectoral
+2024-04-23,Push,Incline bench,Compound,115,7,2,Chest,,Pectoral
+2024-04-23,Push,Chest Fly,Isolation,165,10,3,Chest,,Pectoral
+2024-04-23,Push,Chest Fly,Isolation,165,10,4,Chest,,Pectoral
+2024-04-23,Push,Triceps Press,Isolation,115,10,5,Arms,,Triceps
+2024-04-23,Push,Triceps Press,Isolation,130,12,6,Arms,,Triceps
+2024-04-23,Push,OHP,Compound,55,8,7,Shoulders,,Shoulders
+2024-04-23,Push,OHP,Compound,55,8,8,Shoulders,,Shoulders
+2024-04-23,Push,Triceps,Isolation,50,14,9,Arms,,Triceps
+2024-04-23,Push,Triceps,Isolation,50,12,10,Arms,,Triceps
+2024-04-29,Push,Bench Press,Compound,135,8,1,Chest,,Pectoral
+2024-04-29,Push,Bench Press,Compound,135,8,2,Chest,,Pectoral
+2024-04-29,Push,OHP,Compound,65,8,3,Shoulders,,Shoulders
+2024-04-29,Push,OHP,Compound,65,8,4,Shoulders,,Shoulders
+2024-04-29,Push,Triceps Press,Isolation,115,12,5,Arms,,Triceps
+2024-04-29,Push,Triceps Press,Isolation,115,12,6,Arms,,Triceps
+2024-04-30,Pull,Lat pulldown,Compound,120,10,1,Back,,Lats
+2024-04-30,Pull,Lat pulldown,Compound,120,10,2,Back,,Lats
+2024-04-30,Legs,Squat,Compound,135,6,3,Legs,,Quads
+2024-04-30,Legs,Squat,Compound,145,6,4,Legs,,Quads
+2024-04-30,Legs,Leg Curl,Isolation,60,12,5,Legs,,Hamstrings
+2024-04-30,Legs,Leg Curl,Isolation,60,12,6,Legs,,Hamstrings
+2024-04-30,Legs,Leg Extension,Isolation,60,13,7,Legs,,Quads
+2024-04-30,Legs,Leg Extension,Isolation,60,15,8,Legs,,Quads
+2024-05-01,Pull,T Bar,Compound,90,11,1,Back,,Upper Back
+2024-05-01,Pull,T Bar,Compound,90,13,2,Back,,Upper Back
+2024-05-09,Push,Bench Press,Compound,135,5,1,Chest,,Pectoral
+2024-05-09,Push,Bench Press,Compound,145,4,2,Chest,,Pectoral
+2024-05-09,Push,Bench Press,Compound,145,4,3,Chest,,Pectoral
+2024-05-09,Push,OHP,Compound,75,8,4,Shoulders,,Shoulders
+2024-05-09,Push,OHP,Compound,75,8,5,Shoulders,,Shoulders
+2024-05-09,Push,Triceps Press,Isolation,130,10,6,Arms,,Triceps
+2024-05-09,Push,Triceps Press,Isolation,130,14,7,Arms,,Triceps
+2024-05-11,Push,Incline bench,Compound,115,5,1,Chest,,Pectoral
+2024-05-11,Push,Incline bench,Compound,115,5,2,Chest,,Pectoral
+2024-05-11,Pull,Lat pulldown,Compound,115,10,3,Back,,Lats
+2024-05-11,Pull,Lat pulldown,Compound,115,11,4,Back,,Lats
+2024-05-11,Pull,T Bar,Compound,90,11,5,Back,,Upper Back
+2024-05-11,Pull,T Bar,Compound,90,9,6,Back,,Upper Back
+2024-05-11,Pull,Row,Compound,245,12,7,Back,,Upper Back
+2024-05-11,Pull,Row,Compound,245,12,8,Back,,Upper Back
+2024-05-12,Legs,Squat,Compound,240,10,1,Legs,,Quads
+2024-05-12,Legs,Squat,Compound,240,10,2,Legs,,Quads
+2024-05-12,Legs,Leg Curl,Isolation,90,8,3,Legs,,Hamstrings
+2024-05-12,Legs,Leg Curl,Isolation,90,9,4,Legs,,Hamstrings
+2024-05-12,Legs,Leg Extension,Isolation,125,10,5,Legs,,Quads
+2024-05-12,Legs,Leg Extension,Isolation,125,11,6,Legs,,Quads
+2024-05-13,Push,Chest Fly,Isolation,115,10,1,Chest,,Pectoral
+2024-05-13,Push,Chest Fly,Isolation,115,10,2,Chest,,Pectoral
+2024-05-13,Push,Decline Sit Up,Isolation,25,15,3,Core,,Lower Abs
+2024-05-13,Push,Decline Sit Up,Isolation,25,15,4,Core,,Lower Abs
+2024-05-13,Push,OHP,Compound,138,5,5,Shoulders,,Shoulders
+2024-05-13,Push,Triceps Press,Isolation,130,10,6,Arms,,Triceps
+2024-05-13,Push,Triceps Press,Isolation,130,10,7,Arms,,Triceps
+2024-05-14,Pull,T Bar,Compound,90,14,1,Back,,Upper Back
+2024-05-14,Pull,T Bar,Compound,90,12,2,Back,,Upper Back
+2024-05-14,Pull,Lat pulldown,Compound,115,10,3,Back,,Lats
+2024-05-14,Pull,Lat pulldown,Compound,130,8,4,Back,,Lats
+2024-05-14,Pull,Row,Compound,265,13,5,Back,,Upper Back
+2024-05-14,Pull,Row,Compound,265,13,6,Back,,Upper Back
+2024-05-14,Pull,Pull ups,Compound,-45,8,7,Back,,Lats
+2024-05-14,Pull,Pull ups,Compound,-45,8,8,Back,,Lats
+2024-05-15,Legs,Squat,Compound,240,10,1,Legs,,Quads
+2024-05-15,Legs,Squat,Compound,240,10,2,Legs,,Quads
+2024-05-15,Legs,Decline Sit Up,Isolation,25,15,3,Core,,Unknown
+2024-05-15,Legs,Decline Sit Up,Isolation,25,15,4,Core,,Unknown
+2024-05-15,Legs,Leg Extension,Isolation,100,8,5,Legs,,Quads
+2024-05-15,Legs,Leg Extension,Isolation,100,10,6,Legs,,Quads
+2024-05-15,Legs,Leg Curl,Isolation,110,7,7,Legs,,Hamstrings
+2024-05-17,Push,Bench Press,Compound,135,8,1,Chest,,Pectoral
+2024-05-17,Push,Bench Press,Compound,145,5,2,Chest,,Pectoral
+2024-05-17,Push,Bench Press,Compound,145,5,3,Chest,,Pectoral
+2024-05-17,Push,Triceps Press,Isolation,-,-,4,Arms,,Triceps
+2024-05-17,Push,Shoulder press,Compound,-,-,5,Shoulders,,Unknown
+2024-05-19,Pull,T Bar,Compound,-,-,1,Back,Evanston Lifetime,Upper Back
+2024-05-19,Pull,Lat pulldown,Compound,120,10,2,Back,,Lats
+2024-05-19,Pull,Lat pulldown,Compound,120,10,3,Back,,Lats
+2024-05-19,Pull,Row,Compound,130,12,4,Back,,Upper Back
+2024-05-19,Pull,Row,Compound,130,15,5,Back,,Upper Back
+2024-05-19,Pull,Pull up,Compound,-40,8,6,Back,,Lats
+2024-05-19,Pull,Pull up,Compound,-40,8,7,Back,,Lats
+2024-05-21,Legs,Squat,Compound,240,8,1,Legs,,Quads
+2024-05-21,Legs,Squat,Compound,260,10,2,Legs,,Quads
+2024-05-21,Legs,Leg Curl,Isolation,70,10,3,Legs,,Hamstrings
+2024-05-21,Legs,Leg Curl,Isolation,80,10,4,Legs,,Hamstrings
+2024-05-21,Legs,Leg Extension,Isolation,145,10,5,Legs,,Quads
+2024-05-21,Legs,Leg Extension,Isolation,145,10,6,Legs,,Quads
+2024-05-21,Legs,Leg Extension,Isolation,165,10,7,Legs,,Quads
+2024-05-22,Push,Incline bench,Compound,115,7,1,Chest,,Pectoral
+2024-05-22,Push,Incline bench,Compound,115,7,2,Chest,,Pectoral
+2024-05-22,Push,OHP,Compound,65,8,3,Shoulders,,Shoulders
+2024-05-22,Push,OHP,Compound,65,8,4,Shoulders,,Shoulders
+2024-05-22,Push,Chest Fly,Isolation,130,10,5,Chest,,Pectoral
+2024-05-22,Push,Chest Fly,Isolation,130,10,6,Chest,,Pectoral
+2024-05-22,Push,Triceps,Isolation,50,12,7,Arms,,Triceps
+2024-05-22,Push,Triceps,Isolation,50,12,8,Arms,,Triceps
+2024-05-24,Pull,Upper Back Machine,Isolation,100,10,1,Back,,Upper Back
+2024-05-24,Pull,Upper Back Machine,Isolation,90,10,2,Back,,Upper Back
+2024-05-24,Pull,Pull up,Compound,-30,12,3,Back,,Lats
+2024-05-24,Pull,Pull up,Compound,-30,10,4,Back,,Lats
+2024-05-24,Pull,Row,Compound,120,14,5,Back,,Lower Back
+2024-05-24,Pull,Row,Compound,140,12,6,Back,,Lower Back
+2024-05-24,Pull,Vertical Traction,Compound,70,8,7,Back,,Upper Back
+2024-05-24,Pull,Vertical Traction,Compound,100,8,8,Back,,Upper Back
+2024-05-26,Legs,Squat,Compound,135,5,1,Legs,,Quads
+2024-05-26,Legs,Squat,Compound,155,5,2,Legs,,Quads
+2024-05-26,Legs,Squat,Compound,155,8,3,Legs,,Quads
+2024-05-26,Legs,RDL,Compound,155,8,4,Legs,,Hamstrings
+2024-05-26,Legs,RDL,Compound,155,10,5,Legs,,Hamstrings
+2024-05-26,Legs,Leg Extension,Isolation,145,10,6,Legs,,Quads
+2024-05-26,Legs,Leg Extension,Isolation,125,12,7,Legs,,Quads
+2024-05-26,Legs,Decline Sit Up,Isolation,25,15,8,Core,,Lower Abs
+2024-05-26,Legs,Decline Sit Up,Isolation,25,15,9,Core,,Lower Abs
+2024-05-26,Legs,Leg Curl,Isolation,110,10,10,Legs,,Hamstrings
+2024-05-26,Legs,Leg Curl,Isolation,110,10,11,Legs,,Hamstrings
+2024-05-28,Push,Bench Press,Compound,145,5,1,Chest,,Pectoral
+2024-05-28,Push,Bench Press,Compound,145,5,2,Chest,,Pectoral
+2024-05-28,Push,Chest Fly,Isolation,130,10,3,Chest,,Pectoral
+2024-05-28,Push,Chest Fly,Isolation,130,10,4,Chest,,Pectoral
+2024-05-28,Push,Shoulder Press Machine,Compound,138,9,5,Shoulders,,Shoulders
+2024-05-28,Push,Shoulder Press Machine,Compound,138,9,6,Shoulders,,Shoulders
+2024-05-28,Push,Triceps Press,Isolation,130,12,7,Arms,,Triceps
+2024-05-28,Push,Triceps Press,Isolation,130,9,8,Arms,,Triceps
+2024-05-29,Pull,T Bar,Compound,90,16,1,Back,,Upper Back
+2024-05-29,Pull,T Bar,Compound,95,11,2,Back,,Upper Back
+2024-05-29,Pull,Row,Compound,130,10,3,Back,,Lower Back
+2024-05-29,Pull,Row,Compound,130,10,4,Back,,Lower Back
+2024-05-29,Pull,Lat pulldown,Compound,115,10,5,Back,,Lats
+2024-05-29,Pull,Lat pulldown,Compound,115,10,6,Back,,Lats
+2024-05-29,Pull,Biceps,Isolation,55,21,7,Arms,,Biceps
+2024-05-29,Pull,Biceps,Isolation,55,21,8,Arms,,Biceps
+2024-05-29,Push,Tricep Pulldown (Bar),Isolation,50,10,9,Arms,,Triceps
+2024-05-29,Push,Tricep Pulldown (Bar),Isolation,52.5,10,10,Arms,,Triceps
+2024-05-29,Push,Tricep Pulldown (Bar),Isolation,55,10,11,Arms,,Triceps
+2024-05-29,Push,Shoulder Press Machine,Compound,60,5,12,Shoulders,,Shoulders
+2024-05-29,Push,Shoulder Press Machine,Compound,50,5,13,Shoulders,,Shoulders
+2024-05-29,Push,Triceps pull over,Isolation,22.5,8,14,Arms,,Triceps
+2024-05-29,Push,Triceps pull over,Isolation,22.5,-,15,Arms,,Triceps
+2024-05-30,Legs,Squat,Compound,240,12,1,Legs,,Quads
+2024-05-30,Legs,Squat,Compound,260,12,2,Legs,,Quads
+2024-05-30,Legs,RDL,Compound,155,8,3,Legs,,Hamstrings
+2024-05-30,Legs,RDL,Compound,165,7,4,Legs,,Hamstrings
+2024-05-30,Legs,Decline Sit Up,Isolation,25,15,5,Core,,Lower Abs
+2024-05-30,Legs,Decline Sit Up,Isolation,25,13,6,Core,,Lower Abs
+2024-05-30,Legs,Leg Extension,Isolation,145,10,7,Legs,,Quads
+2024-05-30,Legs,Leg Extension,Isolation,145,10,8,Legs,,Quads
+2024-05-30,Legs,Pull ups,Compound,0,4,9,Back,,Lats
+2024-05-30,Legs,Pull ups,Compound,0,4,10,Back,,Lats
+2024-05-30,Legs,Pull ups,Compound,0,4,11,Back,,Lats
+2024-05-30,Legs,Leg Curl,Isolation,80,10,12,Legs,,Hamstrings
+2024-05-30,Legs,Leg Curl,Isolation,80,10,13,Legs,,Hamstrings
+2024-05-31,Push,Incline bench,Compound,105,7,1,Chest,,Pectoral
+2024-05-31,Push,Incline bench,Compound,105,7,2,Chest,,Pectoral
+2024-05-31,Push,Multiplane Shoulder,Isolation,35,10,3,Shoulders,,Shoulders
+2024-05-31,Push,Multiplane Shoulder,Isolation,35,10,4,Shoulders,,Shoulders
+2024-05-31,Push,Chest Fly,Isolation,125,10,5,Chest,,Pectoral
+2024-05-31,Push,Chest Fly,Isolation,145,10,6,Chest,,Pectoral
+2024-05-31,Push,Chest Fly,Isolation,145,13,7,Chest,,Pectoral
+2024-05-31,Push,Triceps Press,Isolation,130,12,8,Arms,,Triceps
+2024-05-31,Push,Triceps Press,Isolation,130,12,9,Arms,,Triceps
+2024-06-04,Pull,T Bar,Compound,90,14,1,Back,,Upper Back
+2024-06-04,Pull,T Bar,Compound,95,12,2,Back,,Upper Back
+2024-06-04,Pull,Row,Compound,130,12,3,Back,,Lower Back
+2024-06-04,Pull,Row,Compound,130,14,4,Back,,Lower Back
+2024-06-04,Pull,Lat pulldown,Compound,120,10,5,Back,,Lats
+2024-06-04,Pull,Lat pulldown,Compound,120,8,6,Back,,Lats
+2024-06-05,Legs,Squat,Compound,165,5,1,Legs,,Quads
+2024-06-05,Legs,Squat,Compound,155,5,2,Legs,,Quads
+2024-06-05,Legs,Leg Extension,Isolation,145,10,3,Legs,,Quads
+2024-06-05,Legs,Leg Extension,Isolation,145,10,4,Legs,,Quads
+2024-06-05,Legs,Decline Sit Up,Isolation,25,10,5,Core,,Lower Abs
+2024-06-05,Legs,Decline Sit Up,Isolation,25,10,6,Core,,Lower Abs
+2024-06-05,Legs,RDL,Compound,155,7,7,Legs,,Hamstrings
+2024-06-05,Legs,RDL,Compound,155,7,8,Legs,,Hamstrings
+2024-06-06,Push,Bench Press,Compound,145,5,1,Chest,,Pectoral
+2024-06-06,Push,Bench Press,Compound,145,5,2,Chest,,Pectoral
+2024-06-06,Push,Shoulder press,Compound,-,-,3,Shoulders,,Unknown
+2024-06-07,Pull,Lat pulldown,Compound,115,8,1,Back,,Lats
+2024-06-07,Pull,Lat pulldown,Compound,115,8,2,Back,,Lats
+2024-06-07,Pull,Row,Compound,115,10,3,Back,,Upper Back
+2024-06-07,Pull,Row,Compound,115,10,4,Back,,Upper Back
+2024-06-07,Pull,Pull up,Compound,0,10,5,Back,,Lats
+2024-06-07,Pull,Pull up,Compound,0,10,6,Back,,Lats
+2024-06-07,Pull,Pull up,Compound,0,10,7,Back,,Lats
+2024-06-08,Legs,Squat,Compound,220,10,1,Legs,,Quads
+2024-06-08,Legs,Squat,Compound,220,10,2,Legs,,Quads
+2024-06-08,Legs,Leg Curl,Isolation,80,10,3,Legs,,Hamstrings
+2024-06-08,Legs,Leg Curl,Isolation,80,10,4,Legs,,Hamstrings
+2024-06-08,Legs,Decline Sit Up,Isolation,25,13,5,Core,,Lower Abs
+2024-06-08,Legs,Decline Sit Up,Isolation,25,15,6,Core,,Lower Abs
+2024-06-08,Legs,Leg Extension,Isolation,145,10,7,Legs,,Quads
+2024-06-08,Legs,Leg Extension,Isolation,145,10,8,Legs,,Quads
+2024-06-11,Push,Incline bench,Compound,115,7,1,Chest,,Pectoral
+2024-06-11,Push,Incline bench,Compound,115,7,2,Chest,,Pectoral
+2024-06-11,Push,Incline bench,Compound,115,5,3,Chest,,Pectoral
+2024-06-11,Push,Shoulder press,Compound,25,10,4,Shoulders,,Unknown
+2024-06-11,Push,Shoulder press,Compound,25,10,5,Shoulders,,Unknown
+2024-06-11,Push,Chest Fly,Isolation,145,10,6,Chest,,Pectoral
+2024-06-11,Push,Chest Fly,Isolation,145,10,7,Chest,,Pectoral
+2024-06-11,Push,Triceps Press,Isolation,145,10,8,Arms,,Triceps
+2024-06-11,Push,Triceps Press,Isolation,145,10,9,Arms,,Triceps
+2024-06-12,Pull,T Bar,Compound,100,12,1,Back,,Upper Back
+2024-06-12,Pull,T Bar,Compound,100,12,2,Back,,Upper Back
+2024-06-12,Pull,Lat pulldown,Compound,115,12,3,Back,,Lats
+2024-06-12,Pull,Lat pulldown,Compound,115,10,4,Back,,Lats
+2024-06-12,Pull,Row,Compound,140,12,5,Back,,Lower Back
+2024-06-12,Pull,Row,Compound,140,10,6,Back,,Lower Back
+2024-06-13,Legs,Squat,Compound,155,5,1,Legs,,Quads
+2024-06-13,Legs,Squat,Compound,155,7,2,Legs,,Quads
+2024-06-13,Legs,RDL,Compound,155,8,3,Legs,,Hamstrings
+2024-06-13,Legs,RDL,Compound,155,8,4,Legs,,Hamstrings
+2024-06-13,Legs,Leg Extension,Isolation,145,10,5,Legs,,Quads
+2024-06-13,Legs,Leg Extension,Isolation,165,10,6,Legs,,Quads
+2024-06-13,Legs,Leg Curl,Isolation,70,9,7,Legs,,Hamstrings
+2024-06-13,Legs,Leg Curl,Isolation,70,9,8,Legs,,Hamstrings
+2024-06-14,Push,Bench Press,Compound,135,5,1,Chest,,Pectoral
+2024-06-14,Push,Bench Press,Compound,145,5,2,Chest,,Pectoral
+2024-06-14,Push,Incline Dumbbell Press,Compound,35,10,3,Chest,,Pectoral
+2024-06-14,Push,Incline Dumbbell Press,Compound,35,12,4,Chest,,Pectoral
+2024-06-14,Push,Shoulder Press Technogym,Compound,70,8,5,Shoulders,,Shoulders
+2024-06-14,Push,Shoulder Press Technogym,Compound,70,7,6,Shoulders,,Shoulders
+2024-06-14,Push,Seated Dip,Isolation,125,15,7,Arms,,Triceps
+2024-06-14,Push,Seated Dip,Isolation,145,16,8,Arms,,Triceps
+2024-06-17,Pull,Lat pulldown,Compound,115,10,1,Back,,Lats
+2024-06-17,Pull,Lat pulldown,Compound,115,10,2,Back,,Lats
+2024-06-17,Pull,T Bar,Compound,100,10,3,Back,,Upper Back
+2024-06-17,Pull,T Bar,Compound,100,7,4,Back,,Upper Back
+2024-06-17,Pull,Pull up,Compound,-30,8,5,Back,,Lats
+2024-06-17,Pull,Pull up,Compound,-30,9,6,Back,,Lats
+2024-06-17,Pull,Row,Compound,140,12,7,Back,,Lower Back
+2024-06-17,Pull,Row,Compound,140,14,8,Back,,Lower Back
+2024-06-18,Legs,Squat,Compound,260,10,1,Legs,,Quads
+2024-06-18,Legs,Squat,Compound,280,5,2,Legs,,Quads
+2024-06-18,Legs,Squat,Compound,240,10,3,Legs,,Quads
+2024-06-18,Legs,Leg Extension,Isolation,70,10,4,Legs,,Quads
+2024-06-18,Legs,Leg Extension,Isolation,70,10,5,Legs,,Quads
+2024-06-18,Legs,RDL,Compound,155,8,6,Legs,,Hamstrings
+2024-06-18,Legs,RDL,Compound,155,8,7,Legs,,Hamstrings
+2024-06-20,Push,Incline Dumbbell Press,Compound,35,12,1,Chest,,Pectoral
+2024-06-20,Push,Incline Dumbbell Press,Compound,35,12,2,Chest,,Pectoral
+2024-06-20,Push,Incline Dumbbell Press,Compound,35,12,3,Chest,,Pectoral
+2024-06-20,Push,Shoulder press,Compound,25,8,4,Shoulders,,Unknown
+2024-06-20,Push,Shoulder press,Compound,30,10,5,Shoulders,,Unknown
+2024-06-20,Push,Shoulder press,Compound,25,8,6,Shoulders,,Unknown
+2024-06-20,Push,Chest Fly,Isolation,145,10,7,Chest,,Pectoral
+2024-06-20,Push,Chest Fly,Isolation,145,10,8,Chest,,Pectoral
+2024-06-20,Push,Triceps,Isolation,52.5,10,9,Arms,,Triceps
+2024-06-20,Push,Triceps,Isolation,52.5,10,10,Arms,,Triceps
+2024-06-22,Pull,Row,Compound,140,12,1,Back,,Lower Back
+2024-06-22,Pull,Row,Compound,140,12,2,Back,,Lower Back
+2024-06-22,Pull,Lat pulldown,Compound,115,10,3,Back,,Lats
+2024-06-22,Pull,Lat pulldown,Compound,115,10,4,Back,,Lats
+2024-06-22,Pull,T Bar,Compound,90,10,5,Back,,Upper Back
+2024-06-22,Pull,T Bar,Compound,90,10,6,Back,,Upper Back
+2024-06-23,Push,Bench Press,Compound,135,8,1,Chest,,Pectoral
+2024-06-23,Push,Bench Press,Compound,135,8,2,Chest,,Pectoral
+2024-06-23,Push,Bench Press,Compound,145,5,3,Chest,,Pectoral
+2024-06-23,Push,Shoulder press,Compound,138,8,4,Shoulders,,Unknown
+2024-06-23,Push,Shoulder press,Compound,138,8,5,Shoulders,,Unknown
+2024-06-23,Push,Chest Fly,Isolation,145,10,6,Chest,,Pectoral
+2024-06-23,Push,Chest Fly,Isolation,145,10,7,Chest,,Pectoral
+2024-06-23,Push,Tricep overhead,Isolation,30,10,8,Arms,,Unknown
+2024-06-23,Push,Tricep overhead,Isolation,30,10,9,Arms,,Unknown
+2024-06-24,Pull,T Bar,Compound,70,10,1,Back,,Upper Back
+2024-06-24,Pull,T Bar,Compound,70,10,2,Back,,Upper Back
+2024-06-24,Pull,Vertical Traction,Compound,100,10,3,Back,,Upper Back
+2024-06-24,Pull,Vertical Traction,Compound,100,10,4,Back,,Upper Back
+2024-06-24,Pull,Pull up,Compound,-30,10,5,Back,,Lats
+2024-06-24,Pull,Pull up,Compound,-30,10,6,Back,,Lats
+2024-06-24,Pull,High Pull,Compound,50,10,7,Back,,Lower Back
+2024-06-24,Pull,High Pull,Compound,50,10,8,Back,,Lower Back
+2024-06-27,Pull,Lat pulldown,Compound,-,-,1,Back,,Lats
+2024-06-27,Pull,Smith Machine Row,Compound,-,-,2,Back,,Upper Back
+2024-06-27,Pull,Pull up,Compound,-,-,3,Back,,Lats
+2024-06-29,Push,Incline Dumbbell Press,Compound,40,10,1,Chest,,Pectoral
+2024-06-29,Push,Incline Dumbbell Press,Compound,40,10,2,Chest,,Pectoral
+2024-06-29,Push,OHP,Compound,65,8,3,Shoulders,,Shoulders
+2024-06-29,Push,OHP,Compound,85,6,4,Shoulders,,Shoulders
+2024-06-29,Push,OHP,Compound,85,4,5,Shoulders,,Shoulders
+2024-06-29,Push,Chest Fly,Isolation,165,10,6,Chest,,Pectoral
+2024-06-29,Push,Chest Fly,Isolation,165,10,7,Chest,,Pectoral
+2024-07-01,Pull,T Bar,Compound,90,10,1,Back,,Upper Back
+2024-07-01,Pull,T Bar,Compound,95,10,2,Back,,Upper Back
+2024-07-01,Pull,T Bar,Compound,95,10,3,Back,,Upper Back
+2024-07-01,Pull,Lat pulldown,Compound,120,10,4,Back,,Lats
+2024-07-01,Pull,Lat pulldown,Compound,120,10,5,Back,,Lats
+2024-07-01,Pull,Lat pulldown,Compound,120,10,6,Back,,Lats
+2024-07-01,Pull,Row,Compound,140,10,7,Back,,Lower Back
+2024-07-01,Pull,Row,Compound,140,10,8,Back,,Lower Back
+2024-07-01,Pull,Row,Compound,140,12,9,Back,,Lower Back
+2024-07-02,Push,Bench Press,Compound,135,4,1,Chest,,Pectoral
+2024-07-02,Push,Bench Press,Compound,135,8,2,Chest,,Pectoral
+2024-07-02,Push,Incline Dumbbell Press,Compound,40,12,3,Chest,,Pectoral
+2024-07-02,Push,Incline Dumbbell Press,Compound,40,10,4,Chest,,Pectoral
+2024-07-02,Push,Incline Dumbbell Press,Compound,40,10,5,Chest,,Pectoral
+2024-07-02,Push,OHP,Compound,65,8,6,Shoulders,,Shoulders
+2024-07-02,Push,OHP,Compound,75,8,7,Shoulders,,Shoulders
+2024-07-02,Push,OHP,Compound,75,8,8,Shoulders,,Shoulders
+2024-07-03,Pull,T Bar,Compound,90,14,1,Back,,Upper Back
+2024-07-03,Pull,T Bar,Compound,95,12,2,Back,,Upper Back
+2024-07-03,Pull,Lat pulldown,Compound,120,10,3,Back,,Lats
+2024-07-03,Pull,Lat pulldown,Compound,120,10,4,Back,,Lats
+2024-07-03,Pull,Vertical Traction,Compound,100,10,5,Back,,Upper Back
+2024-07-03,Pull,Vertical Traction,Compound,100,10,6,Back,,Upper Back
+2024-07-06,Push,Bench Press,Compound,135,4,1,Chest,,Pectoral
+2024-07-06,Push,Bench Press,Compound,145,4,2,Chest,,Pectoral
+2024-07-06,Push,Bench Press,Compound,145,4,3,Chest,,Pectoral
+2024-07-06,Push,Incline Dumbbell Press,Compound,40,12,4,Chest,,Pectoral
+2024-07-06,Push,Incline Dumbbell Press,Compound,40,12,5,Chest,,Pectoral
+2024-07-06,Push,Incline Dumbbell Press,Compound,40,12,6,Chest,,Pectoral
+2024-07-06,Push,OHP,Compound,75,8,7,Shoulders,,Shoulders
+2024-07-06,Push,OHP,Compound,75,8,8,Shoulders,,Shoulders
+2024-07-08,Pull,T Bar,Compound,90,10,1,Back,,Upper Back
+2024-07-08,Pull,T Bar,Compound,100,12,2,Back,,Upper Back
+2024-07-08,Pull,T Bar,Compound,100,12,3,Back,,Upper Back
+2024-07-08,Pull,Lat pulldown,Compound,115,12,4,Back,,Lats
+2024-07-08,Pull,Lat pulldown,Compound,115,12,5,Back,,Lats
+2024-07-08,Pull,Lat pulldown,Compound,130,8,6,Back,,Lats
+2024-07-08,Pull,Row,Compound,140,14,7,Back,,Lower Back
+2024-07-08,Pull,Row,Compound,140,14,8,Back,,Lower Back
+2024-07-09,Legs,Squat,Compound,155,5,1,Legs,,Quads
+2024-07-09,Legs,Squat,Compound,155,5,2,Legs,,Quads
+2024-07-09,Legs,RDL,Compound,160,8,3,Legs,,Hamstrings
+2024-07-09,Legs,RDL,Compound,160,8,4,Legs,,Hamstrings
+2024-07-09,Legs,Leg Extension,Isolation,165,10,5,Legs,,Quads
+2024-07-09,Legs,Leg Extension,Isolation,165,12,6,Legs,,Quads
+2024-07-09,Legs,Leg Curl,Isolation,60,10,7,Legs,,Hamstrings
+2024-07-09,Legs,Leg Curl,Isolation,80,10,8,Legs,,Hamstrings
+2024-07-11,Push,Incline Dumbbell Press,Compound,40,10,1,Chest,,Pectoral
+2024-07-11,Push,Incline Dumbbell Press,Compound,40,12,2,Chest,,Pectoral
+2024-07-11,Push,Incline Dumbbell Press,Compound,40,12,3,Chest,,Pectoral
+2024-07-11,Push,OHP,Compound,65,8,4,Shoulders,,Shoulders
+2024-07-11,Push,OHP,Compound,75,5,5,Shoulders,,Shoulders
+2024-07-11,Push,Chest Fly,Isolation,165,10,6,Chest,,Pectoral
+2024-07-11,Push,Chest Fly,Isolation,165,10,7,Chest,,Pectoral
+2024-07-11,Push,Triceps Press,Isolation,130,12,8,Arms,,Triceps
+2024-07-11,Push,Triceps Press,Isolation,130,14,9,Arms,,Triceps

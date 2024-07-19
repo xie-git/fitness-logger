@@ -198,6 +198,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     title: {
                         display: true,
                         text: 'Total Sets per Muscle Group',
+                        padding: {
+                            top: 0, // Adjust the top padding to move the title further from the chart
+                            bottom: 0 // You can also adjust the bottom padding if needed
+                        },
                         font: {
                             size: 10, // Set font size to 10
                             color: 'black', // Set font color to black
@@ -292,6 +296,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         title: {
                             display: true,
                             text: `Total Sets per Muscle Group (${yearMonth})`,
+                            padding: {
+                                top: 0, // Adjust the top padding to move the title further from the chart
+                                bottom: 20 // You can also adjust the bottom padding if needed
+                            },
                             font: {
                                 size: 10, // Set font size to 10
                                 color: 'black', // Set font color to black
@@ -304,6 +312,91 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    function createSpecificMuscleSetCountChart(data) {
+    const ctx = document.getElementById('specificMuscleSetCountChart').getContext('2d');
+        
+    const { labels, counts } = processSpecificMuscleSetCounts(data);
+    
+    const colors = labels.map(() => 'rgba(75, 192, 192, 0.2)');
+    const borderColors = labels.map(() => 'rgba(75, 192, 192, 1)');
+    
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Total Sets per Specific Muscle',
+                data: counts,
+                backgroundColor: colors,
+                borderColor: borderColors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y', // Rotate the chart
+            scales: {
+                x: { 
+                    grid: { 
+                        display: false // Remove the grid lines on the x-axis
+                    },
+                    ticks: {
+                        font: {
+                            size: 10 // Adjust font size for x-axis labels
+                        }
+                    }
+                },
+                y: { 
+                    grid: { 
+                        display: false // Remove the grid lines on the y-axis
+                    },
+                    ticks: {
+                        autoSkip: false, // Ensure all labels are displayed
+                        font: {
+                            size: 10 // Adjust font size for x-axis labels
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false // Optional: Hide the legend
+                },
+                tooltip: {
+                    enabled: true // Optional: Enable tooltips
+                },
+                datalabels: {
+                    anchor: 'end',
+                    align: 'right',
+                    offset: -10, // Adjust offset to move labels closer to the bars
+                    formatter: function(value) {
+                        return value;
+                    },
+                    color: 'black',
+                    font: {
+                        weight: 'italic',
+                        size: 8 // Set font size for data labels
+                    },
+                    padding: {
+                        top: 5, // Adjust top padding
+                        bottom: 5, // Adjust bottom padding
+                        right: -5
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Total Sets per Specific Muscle',
+                    font: {
+                        size: 10, // Set font size for title
+                        color: 'black', // Set font color to black
+                        align: 'start' // Align title to the left
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+}
 
     // Fetch and parse data, then process and create charts
     fetchCSVData().then(data => {
@@ -322,5 +415,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // Process and create muscle group charts by month
         const muscleGroupDataByMonth = processMuscleGroupDataByMonth(parsedData);
         createMuscleGroupChartByMonth(muscleGroupDataByMonth); // Add this line to call the function
+
+        // Process and create specific muscle set count chart
+        createSpecificMuscleSetCountChart(parsedData);
     });
 });
+
+// Attach function to the window object to make it globally accessible
+window.createSpecificMuscleSetCountChart = createSpecificMuscleSetCountChart;

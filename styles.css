@@ -12,6 +12,7 @@ body {
     background-color: #f4f4f4;
     padding: 20px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -34,9 +35,125 @@ h1 {
     text-align: center;
 }
 
+.logo-container {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-container span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style the logo button */
+.logo-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border: none;
+    padding: 5px; /* Adjusted padding to make the button shorter */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff; /* Set the text color to white */
+    font-size: 14px; /* Smaller font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline */
+}
+
+.logo-button:hover {
+    background-color: #555;
+}
+
+.logo-button img {
+    width: 30px; /* Adjusted size to make the button shorter */
+    height: 30px; /* Adjusted size to make the button shorter */
+    margin-right: 5px; /* Adjusted margin to make the button shorter */
+}
+
+/* Style for the fixed button at the top */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000; /* Ensure it stays above other elements */
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    padding: 5px 20px; /* Add some padding to the left */
+}
+
+/* Make the nav bar scroll horizontally */
+nav {
+    background-color: #333; /* Dark background color */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+    padding: 15px 0; /* Increased padding */
+    width: 100%; /* Make sure it spans the full width */
+    box-sizing: border-box; /* Include padding in width */
+    position: fixed; /* Keep it fixed at the top */
+    top: 40px; /* Position below the fixed button */
+    z-index: 999; /* Ensure it stays on top */
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* Adjust nav items */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+nav ul li {
+    flex: 0 0 auto; /* Prevent flex items from growing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff; /* Light text color */
+    border: 1px solid transparent;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #fff; /* Hover style */
+}
+
+form {
+    margin: 20px;
+}
+
+/* Ensure the rest of the content is below the fixed nav bar */
+main {
+    padding-top: 0px; /* Adjust based on the height of your nav bar */
+}
+
+/* Example styles for the rest of the content */
+.content-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* General canvas styles */
 canvas {
     width: 100%;
-    max-width: 600px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -57,8 +174,17 @@ canvas {
     margin: 0 10px;
 }
 
+.dashboard-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    h1 {
+    h1.dashboard-title {
         font-size: 1.5rem;
     }
 
@@ -74,10 +200,14 @@ canvas {
     .scroll-container .chart-container {
         width: 80%;
     }
+
+    main {
+        margin-top: 90px; /* Adjust based on the combined height of logo-button and nav */
+    }
 }
 
 @media (max-width: 480px) {
-    h1 {
+    h1.dashboard-title {
         font-size: 1.2rem;
     }
 
@@ -92,5 +222,9 @@ canvas {
 
     .scroll-container .chart-container {
         width: 100%;
+    }
+
+    main {
+        margin-top: 100px; /* Adjust based on the combined height of logo-button and nav */
     }
 }

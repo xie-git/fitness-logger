@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .logo-button:hover {
+            background-color: #555;
+        }
+
+        .logo-button img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-button span {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Aggregate</a></li>
+            <li><a href="muscle-groups.html">Muscle Groups</a></li>
+            <li><a href="muscles.html">Muscles</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="time-series.html">Time Series</a></li>
+            <li><a href="input.html">Input</a></li>
+        </ul>
+    </nav>
+    <h1>Input</h1>
+    <form id="dataForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+
+            const response = await fetch('YOUR_API_GATEWAY_ENDPOINT', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, age })
+            });
+
+            if (response.ok) {
+                alert('Data submitted successfully!');
+            } else {
+                alert('Error submitting data.');
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Aggregate</a></li>
+            <li><a href="muscle-groups.html">Muscle Groups</a></li>
+            <li><a href="muscles.html">Muscles</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="time-series.html">Time Series</a></li>
+            <li><a href="input.html">Input</a></li>
+        </ul>
+    </nav>
+    <h1>Input</h1>
+    <form id="dataForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+
+            const response = await fetch('YOUR_API_GATEWAY_ENDPOINT', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, age })
+            });
+
+            if (response.ok) {
+                alert('Data submitted successfully!');
+            } else {
+                alert('Error submitting data.');
+            }
+        });
+    </script>
+</body>
+</html>

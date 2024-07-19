@@ -2,7 +2,7 @@
 
 async function fetchCSVData() {
     // change to test locally
-    // const response = await fetch('data/combined_data_cleaned.csv');
+     //const response = await fetch('data/combined_data_cleaned.csv');
     const response = await fetch('https://xie-fitness-logger-web.s3.amazonaws.com/combined_data_cleaned.csv');
     const data = await response.text();
     return data;
@@ -113,6 +113,27 @@ function processMuscleGroupDataByMonth(data) {
     return result;
 }
 
+function processSpecificMuscleSetCounts(data) {
+    const specificMuscleCounts = {};
+
+    data.forEach((row) => {
+        if (row['Specific Muscle']) {
+            const specificMuscle = row['Specific Muscle'];
+            if (!specificMuscleCounts[specificMuscle]) {
+                specificMuscleCounts[specificMuscle] = 0;
+            }
+            specificMuscleCounts[specificMuscle]++;
+        }
+    });
+
+    // Convert the counts object into sorted arrays
+    const sortedSpecificMuscles = Object.entries(specificMuscleCounts).sort((a, b) => b[1] - a[1]);
+    const labels = sortedSpecificMuscles.map(item => item[0]);
+    const counts = sortedSpecificMuscles.map(item => item[1]);
+
+    return { labels, counts };
+}
+
 function displayCounters(stats) {
     const countersDiv = document.getElementById('counters');
 
@@ -149,3 +170,4 @@ window.processData = processData;
 window.processMuscleGroupData = processMuscleGroupData;
 window.processMuscleGroupDataByMonth = processMuscleGroupDataByMonth;
 window.displayCounters = displayCounters;
+window.processSpecificMuscleSetCounts = processSpecificMuscleSetCounts;
