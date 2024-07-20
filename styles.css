@@ -1,6 +1,7 @@
 /* Include Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* General body styles */
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -15,16 +16,13 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
-    font-size: 2rem;
-    color: #333;
+.dashboard-title {
+    font-weight: bold;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-#counters {
+.insights-box {
     font-size: 14px;
-    font-weight: regular;
     margin-bottom: 20px;
     width: 100%;
     max-width: 600px;
@@ -32,13 +30,13 @@ h1 {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
+    text-align: left;
 }
 
-/* Styling for the insights box */
-.insights-box {
+/* Counters and insights box styling */
+#counters {
     font-size: 10px;
-    font-weight: default;
     margin-bottom: 20px;
     width: 100%;
     max-width: 600px;
@@ -49,129 +47,126 @@ h1 {
     text-align: left;
 }
 
-.logo-container {
-    background-color: #333;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-container img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo-container span {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Style the logo button */
-.logo-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    border: none;
-    padding: 5px; /* Adjusted padding to make the button shorter */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    color: #fff; /* Set the text color to white */
-    font-size: 14px; /* Smaller font size */
-    font-weight: bold; /* Make the text bold */
-    text-decoration: none; /* Remove underline */
-}
-
-.logo-button:hover {
-    background-color: #555;
-}
-
-.logo-button img {
-    width: 30px; /* Adjusted size to make the button shorter */
-    height: 30px; /* Adjusted size to make the button shorter */
-    margin-right: 5px; /* Adjusted margin to make the button shorter */
-}
-
-/* Style for the fixed button at the top */
+/* Logo container and buttons */
 .fixed-top {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #333;
-    z-index: 1000; /* Ensure it stays above other elements */
+    z-index: 1000;
     display: flex;
-    justify-content: flex-start; /* Align to the left */
+    justify-content: space-between;
     align-items: center;
-    padding: 5px 20px; /* Add some padding to the left */
+    padding: 5px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Make the nav bar scroll horizontally */
+.left-container, .right-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-button, .input-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-button img, .input-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.logo-button:hover, .input-button:hover {
+    background-color: #555;
+}
+
+/* Input button specific styles */
+.input-button {
+    background-color: #007bff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px; /* Shift the button to the left by adding margin to the right */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smoother hover effect */
+}
+
+.input-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow on hover */
+}
+
+/* Navigation bar styles */
 nav {
-    background-color: #333; /* Dark background color */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent items from wrapping */
-    padding: 15px 0; /* Increased padding */
-    width: 100%; /* Make sure it spans the full width */
-    box-sizing: border-box; /* Include padding in width */
-    position: fixed; /* Keep it fixed at the top */
-    top: 40px; /* Position below the fixed button */
-    z-index: 999; /* Ensure it stays on top */
-    display: flex; /* Use flexbox for horizontal layout */
-    align-items: center; /* Center items vertically */
+    background-color: #333;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 8px 0; /* Reduced padding to make the navbar shorter */
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 40px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
 }
 
-/* Adjust nav items */
 nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    display: flex; /* Use flexbox for horizontal layout */
+    display: flex;
 }
 
 nav ul li {
-    flex: 0 0 auto; /* Prevent flex items from growing */
+    flex: 0 0 auto;
 }
 
 nav ul li a {
     text-decoration: none;
     display: inline-block;
-    padding: 10px 15px;
-    color: #fff; /* Light text color */
+    padding: 8px 12px; /* Reduced padding to make the items smaller */
+    color: #fff;
     border: 1px solid transparent;
+    font-size: 14px; /* Reduced font size */
 }
 
 nav ul li a:hover {
-    border-bottom: 1px solid #fff; /* Hover style */
+    border-bottom: 1px solid #fff;
 }
 
-form {
-    margin: 20px;
-}
-
-/* Ensure the rest of the content is below the fixed nav bar */
+/* Main content styles */
 main {
-    padding-top: 0px; /* Adjust based on the height of your nav bar */
-}
-
-/* Example styles for the rest of the content */
-.content-container {
+    padding-top: 0px; /* Adjust based on the height of the fixed nav bar */
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.content-container {
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* General canvas styles */
+/* Canvas styles */
 canvas {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
 
+/* Scroll container styles */
 .scroll-container {
     display: flex;
     overflow-x: auto;
@@ -188,12 +183,68 @@ canvas {
     margin: 0 10px;
 }
 
+/* Styles for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input {
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#response {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Additional styles for better layout */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dashboard-title {
     font-size: 2rem;
     color: #333;
-    text-align: center;
     margin-bottom: 20px;
-    font-weight: bold;
+    text-align: center;
 }
 
 /* Responsive adjustments */
@@ -202,7 +253,7 @@ canvas {
         font-size: 1.5rem;
     }
 
-    #counters {
+    #counters, .insights-box {
         font-size: 12px;
         padding: 8px;
     }
@@ -225,7 +276,7 @@ canvas {
         font-size: 1.2rem;
     }
 
-    #counters {
+    #counters, .insights-box {
         font-size: 10px;
         padding: 6px;
     }

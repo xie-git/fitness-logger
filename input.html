@@ -3,38 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input</title>
+    <title>Input - Fitness Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .logo-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #333;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .logo-button:hover {
-            background-color: #555;
-        }
-
-        .logo-button img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .logo-button span {
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+    <div class="fixed-top">
+        <div class="left-container">
+            <button class="logo-button" onclick="window.location.href='index.html'">
+                <img src="ailogo.png" alt="Fitness Dashboard Logo">
+                <span>Fitness Dashboard</span>
+            </button>
+        </div>
+        <div class="right-container">
+            <button class="input-button" onclick="window.location.href='input.html'">
+                <span>Input</span>
+            </button>
+        </div>
+    </div>
     <nav>
         <ul>
             <li><a href="index.html">Aggregate</a></li>
@@ -42,88 +29,25 @@
             <li><a href="muscles.html">Muscles</a></li>
             <li><a href="exercises.html">Exercises</a></li>
             <li><a href="time-series.html">Time Series</a></li>
-            <li><a href="input.html">Input</a></li>
         </ul>
     </nav>
-    <h1>Input</h1>
-    <form id="dataForm">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age" required><br>
-        <button type="submit">Submit</button>
-    </form>
-    <script>
-        document.getElementById('dataForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-
-            const response = await fetch('YOUR_API_GATEWAY_ENDPOINT', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, age })
-            });
-
-            if (response.ok) {
-                alert('Data submitted successfully!');
-            } else {
-                alert('Error submitting data.');
-            }
-        });
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Aggregate</a></li>
-            <li><a href="muscle-groups.html">Muscle Groups</a></li>
-            <li><a href="muscles.html">Muscles</a></li>
-            <li><a href="exercises.html">Exercises</a></li>
-            <li><a href="time-series.html">Time Series</a></li>
-            <li><a href="input.html">Input</a></li>
-        </ul>
-    </nav>
-    <h1>Input</h1>
-    <form id="dataForm">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age" required><br>
-        <button type="submit">Submit</button>
-    </form>
-    <script>
-        document.getElementById('dataForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-
-            const response = await fetch('YOUR_API_GATEWAY_ENDPOINT', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, age })
-            });
-
-            if (response.ok) {
-                alert('Data submitted successfully!');
-            } else {
-                alert('Error submitting data.');
-            }
-        });
-    </script>
+    <main>
+        <div class="content-container">
+            <h1 class="dashboard-title">Input Exercise Data</h1>
+            <form id="exercise-form">
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" name="weight" required>
+                <label for="reps">Reps:</label>
+                <input type="number" id="reps" name="reps" required>
+                <label for="exercise">Exercise:</label>
+                <input type="text" id="exercise" name="exercise" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="response"></div>
+        </div>
+    </main>
+    <script src="dataProcessing.js"></script>
+    <script src="app.js"></script>
+    <script src="input.js"></script> <!-- Specific JavaScript file for input -->
 </body>
 </html>

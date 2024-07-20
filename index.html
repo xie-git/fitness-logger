@@ -12,10 +12,17 @@
 </head>
 <body>
     <div class="fixed-top">
-        <button class="logo-button" onclick="window.location.href='index.html'">
-            <img src="ailogo.png" alt="Fitness Dashboard Logo">
-            <span>Fitness Dashboard</span>
-        </button>
+        <div class="left-container">
+            <button class="logo-button" onclick="window.location.href='index.html'">
+                <img src="ailogo.png" alt="Fitness Dashboard Logo">
+                <span>Fitness Dashboard</span>
+            </button>
+        </div>
+        <div class="right-container">
+            <button class="input-button" onclick="window.location.href='input.html'">
+                <span>Input</span>
+            </button>
+        </div>
     </div>
     <nav>
         <ul>
@@ -24,7 +31,6 @@
             <li><a href="muscles.html">Muscles</a></li>
             <li><a href="exercises.html">Exercises</a></li>
             <li><a href="time-series.html">Time Series</a></li>
-            <li><a href="input.html">Input</a></li>
         </ul>
     </nav>
     <main>
@@ -33,7 +39,7 @@
             <h3>Powered by ChatGPT 4o</h3>
             <div id="insights-content">Loading insights...</div>
         </div>
-        <div id="counters" style="font-size: 14px; font-weight: bold; margin-bottom: 20px; text-align: left;"></div>
+        <div id="counters"></div>
         <canvas id="workoutCountChart"></canvas>
         <canvas id="workoutTypeChart"></canvas>
         <canvas id="muscleGroupChart"></canvas>
