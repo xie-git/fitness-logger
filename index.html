@@ -28,7 +28,11 @@
         </ul>
     </nav>
     <main>
-        <h1 class="dashboard-title">Fitness Dashboard</h1>
+        <div id="insights-box" class="insights-box">
+            <h2>AI Insights</h2>
+            <h3>Powered by ChatGPT 4o</h3>
+            <div id="insights-content">Loading insights...</div>
+        </div>
         <div id="counters" style="font-size: 14px; font-weight: bold; margin-bottom: 20px; text-align: left;"></div>
         <canvas id="workoutCountChart"></canvas>
         <canvas id="workoutTypeChart"></canvas>
@@ -38,5 +42,6 @@
     </main>
     <script src="dataProcessing.js"></script>
     <script src="app.js"></script>
+    <script src="insights.js"></script>
 </body>
 </html>

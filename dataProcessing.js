@@ -2,8 +2,8 @@
 
 async function fetchCSVData() {
     // change to test locally
-     //const response = await fetch('data/combined_data_cleaned.csv');
-    const response = await fetch('https://xie-fitness-logger-web.s3.amazonaws.com/combined_data_cleaned.csv');
+    const response = await fetch('data/combined_data_cleaned.csv');
+    //const response = await fetch('https://xie-fitness-logger-web.s3.amazonaws.com/combined_data_cleaned.csv');
     const data = await response.text();
     return data;
 }

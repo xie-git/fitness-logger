@@ -24,15 +24,29 @@ h1 {
 
 #counters {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: regular;
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     padding: 10px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+/* Styling for the insights box */
+.insights-box {
+    font-size: 10px;
+    font-weight: default;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .logo-container {
@@ -202,7 +216,7 @@ canvas {
     }
 
     main {
-        margin-top: 90px; /* Adjust based on the combined height of logo-button and nav */
+        margin-top: 110px; /* Adjust based on the combined height of logo-button and nav */
     }
 }
 
@@ -225,6 +239,6 @@ canvas {
     }
 
     main {
-        margin-top: 100px; /* Adjust based on the combined height of logo-button and nav */
+        margin-top: 110px; /* Adjust based on the combined height of logo-button and nav */
     }
 }
