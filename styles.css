@@ -4,50 +4,14 @@
 /* General body styles */
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
     overflow-x: hidden;
 }
 
-.dashboard-title {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.insights-box {
-    font-size: 14px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    text-align: left;
-}
-
-/* Counters and insights box styling */
-#counters {
-    font-size: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Logo container and buttons */
+/* Fixed top bar and buttons */
 .fixed-top {
     position: fixed;
     top: 0;
@@ -57,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -66,7 +30,7 @@ body {
     align-items: center;
 }
 
-.logo-button, .input-button {
+.logo-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,41 +45,44 @@ body {
     text-decoration: none;
 }
 
-.logo-button img, .input-button img {
+.logo-button img {
     width: 30px;
     height: 30px;
     margin-right: 5px;
 }
 
-.logo-button:hover, .input-button:hover {
+.logo-button:hover {
     background-color: #555;
 }
 
-/* Input button specific styles */
 .input-button {
     background-color: #007bff;
+    border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    margin-right: 10px; /* Shift the button to the left by adding margin to the right */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smoother hover effect */
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 30px;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .input-button:hover {
     background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation bar styles */
 nav {
+    position: fixed;
+    top: 60px;
+    width: 100%;
     background-color: #333;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 8px 0; /* Reduced padding to make the navbar shorter */
-    width: 100%;
-    box-sizing: border-box;
-    position: fixed;
-    top: 40px;
     z-index: 999;
+    padding: 8px 0;
     display: flex;
     align-items: center;
 }
@@ -134,62 +101,72 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     display: inline-block;
-    padding: 8px 12px; /* Reduced padding to make the items smaller */
+    padding: 8px 12px;
     color: #fff;
     border: 1px solid transparent;
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
+    transition: border-bottom 0.3s;
 }
 
 nav ul li a:hover {
     border-bottom: 1px solid #fff;
 }
 
+/* Styling for the Nutrition link */
+.nutrition-link {
+    color: #005caa; /* MyFitnessPal logo blue color */
+    font-weight: bold;
+    
+}
+
+.nutrition-link:hover {
+    border-bottom: 1px solid #005caa; /* Same blue color for hover effect */
+}
+
 /* Main content styles */
 main {
-    padding-top: 0px; /* Adjust based on the height of the fixed nav bar */
+    padding-top: 120px; /* Adjust based on the combined height of fixed-top and nav */
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+    padding: 20px;
 }
 
 .content-container {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Canvas styles */
-canvas {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Scroll container styles */
-.scroll-container {
     display: flex;
-    overflow-x: auto;
-    width: 100%;
-    padding: 10px 0;
-    max-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dashboard title styles */
+.dashboard-title {
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.scroll-container .chart-container {
-    flex: 0 0 auto;
-    width: 90%;
+/* Counters and insights box styling */
+#counters, .insights-box {
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: 100%;
     max-width: 600px;
-    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-/* Styles for the form */
+/* Form styling */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px auto;
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     background-color: white;
     padding: 20px;
@@ -203,7 +180,7 @@ form label {
 }
 
 form input {
-    width: calc(100% - 20px);
+    width: calc(90% - 20px);
     margin-top: 5px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -233,18 +210,28 @@ form button:hover {
     color: #333;
 }
 
-/* Additional styles for better layout */
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Canvas styles */
+canvas {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.dashboard-title {
-    font-size: 2rem;
-    color: #333;
+/* Scroll container styles */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px 0;
+    max-height: 60vh;
     margin-bottom: 20px;
-    text-align: center;
+}
+
+.scroll-container .chart-container {
+    flex: 0 0 auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 10px;
 }
 
 /* Responsive adjustments */
@@ -267,7 +254,7 @@ form button:hover {
     }
 
     main {
-        margin-top: 110px; /* Adjust based on the combined height of logo-button and nav */
+        margin-top: 120px; /* Adjust based on the combined height of logo-button and nav */
     }
 }
 
@@ -290,6 +277,6 @@ form button:hover {
     }
 
     main {
-        margin-top: 110px; /* Adjust based on the combined height of logo-button and nav */
+        margin-top: 120px; /* Adjust based on the combined height of logo-button and nav */
     }
 }

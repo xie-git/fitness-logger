@@ -11,28 +11,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <div class="fixed-top">
-        <div class="left-container">
-            <button class="logo-button" onclick="window.location.href='index.html'">
-                <img src="ailogo.png" alt="Fitness Dashboard Logo">
-                <span>Fitness Dashboard</span>
-            </button>
-        </div>
-        <div class="right-container">
-            <button class="input-button" onclick="window.location.href='input.html'">
-                <span>Input</span>
-            </button>
-        </div>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Aggregate</a></li>
-            <li><a href="muscle-groups.html">Muscle Groups</a></li>
-            <li><a href="muscles.html">Muscles</a></li>
-            <li><a href="exercises.html">Exercises</a></li>
-            <li><a href="time-series.html">Time Series</a></li>
-        </ul>
-    </nav>
+    <div id="navbar"></div>
     <main>
         <div id="insights-box" class="insights-box">
             <h2>AI Insights</h2>
@@ -46,6 +25,7 @@
         <canvas id="specificMuscleSetCountChart"></canvas> <!-- Canvas for specific muscle set counts -->
         <div id="muscleGroupChartsContainer" class="scroll-container"></div>
     </main>
+    <script src="navbar.js"></script> <!-- Include the navbar.js script -->
     <script src="dataProcessing.js"></script>
     <script src="app.js"></script>
     <script src="insights.js"></script>
