@@ -17,9 +17,10 @@
             <h2>AI Insights</h2>
             <h3>Powered by ChatGPT 4o</h3>
             <div id="insights-content">Loading insights...</div>
+            <button id="refresh-insights" onclick="refreshInsights()">Refresh Insights</button>
         </div>
         <div id="aggregate-box" class="aggregate-box">
-            <h3>Best Lifts</h2>
+            <h3>Best Lifts</h3>
             <ul id="aggregate-list"></ul>
         </div>
         <div id="counters"></div>
@@ -29,7 +30,9 @@
         <canvas id="specificMuscleSetCountChart"></canvas> <!-- Canvas for specific muscle set counts -->
         <div id="muscleGroupChartsContainer" class="scroll-container"></div>
     </main>
+    <div id="footer-placeholder"></div>
     <script src="navbar.js"></script> <!-- Include the navbar.js script -->
+    <script src="footer.js"></script> <!-- Include the footer.js script -->
     <script src="dataProcessing.js"></script>
     <script src="app.js"></script>
     <script src="insights.js"></script>
