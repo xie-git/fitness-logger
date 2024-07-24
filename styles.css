@@ -234,6 +234,33 @@ canvas {
     margin: 0 10px;
 }
 
+/* General styles for the aggregate box */
+.aggregate-box {
+    font-size: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.aggregate-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.aggregate-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.aggregate-box li {
+    margin-bottom: 4px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     h1.dashboard-title {
