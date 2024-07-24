@@ -428,41 +428,102 @@ function calculateHighestWeights(data) {
     return highestWeights;
 }
 
+function createMuscleGroupPieChart(labels, counts) {
+    const ctx = document.getElementById('muscleGroupPieChart').getContext('2d');
 
-    // Fetch and parse data, then process and create charts
-    fetchCSVData().then(data => {
-        const parsedData = parseCSV(data);
-    
-        // Process data for the counters and charts
-        const { labels, counts, totalGymSessions, workoutTypeCounts, gymVisitsPerMonth } = processData(parsedData);
-        displayCounters({ totalGymSessions, workoutTypeCounts, gymVisitsPerMonth });
-        createWorkoutCountChart(labels, counts);
-        createWorkoutTypeChart(workoutTypeCounts);
-    
-        // Process and create muscle group chart
-        const { labels: muscleGroupLabels, counts: muscleGroupCounts } = processMuscleGroupData(parsedData);
-        createMuscleGroupChart(muscleGroupLabels, muscleGroupCounts);
-    
-        // Process and create muscle group charts by month
-        const muscleGroupDataByMonth = processMuscleGroupDataByMonth(parsedData);
-        createMuscleGroupChartByMonth(muscleGroupDataByMonth);
-    
-        // Process and create specific muscle set count chart
-        createSpecificMuscleSetCountChart(parsedData);
-    
-        // Calculate highest weights
-        const highestWeights = calculateHighestWeights(parsedData);
-        console.log("Highest Weights:", highestWeights);
-    
-        // Display highest weights
-        const aggregateList = document.getElementById('aggregate-list');
-        aggregateList.innerHTML = '';
-        for (const [exercise, weight] of Object.entries(highestWeights)) {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${exercise}: ${weight} lbs`;
-            aggregateList.appendChild(listItem);
+    const colors = [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(201, 203, 207, 0.2)'
+    ];
+
+    const borderColors = [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(201, 203, 207, 1)'
+    ];
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: counts,
+                backgroundColor: colors,
+                borderColor: borderColors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                },
+                tooltip: {
+                    enabled: true
+                },
+                title: {
+                    display: true,
+                    text: 'Distribution of Sets per Muscle Group',
+                    font: {
+                        size: 14,
+                        color: 'black',
+                        align: 'start'
+                    }
+                }
+            }
         }
     });
+}
+
+
+    // Fetch and parse data, then process and create charts
+    // Fetch and parse data, then process and create charts
+fetchCSVData().then(data => {
+    const parsedData = parseCSV(data);
+
+    // Process data for the counters and charts
+    const { labels, counts, totalGymSessions, workoutTypeCounts, gymVisitsPerMonth } = processData(parsedData);
+    displayCounters({ totalGymSessions, workoutTypeCounts, gymVisitsPerMonth });
+    createWorkoutCountChart(labels, counts);
+    createWorkoutTypeChart(workoutTypeCounts);
+
+    // Process and create muscle group chart
+    const { labels: muscleGroupLabels, counts: muscleGroupCounts } = processMuscleGroupData(parsedData);
+    createMuscleGroupChart(muscleGroupLabels, muscleGroupCounts);
+
+    // Create muscle group pie chart
+    createMuscleGroupPieChart(muscleGroupLabels, muscleGroupCounts);
+
+    // Process and create muscle group charts by month
+    const muscleGroupDataByMonth = processMuscleGroupDataByMonth(parsedData);
+    createMuscleGroupChartByMonth(muscleGroupDataByMonth);
+
+    // Process and create specific muscle set count chart
+    createSpecificMuscleSetCountChart(parsedData);
+
+    // Calculate highest weights
+    const highestWeights = calculateHighestWeights(parsedData);
+    console.log("Highest Weights:", highestWeights);
+
+    // Display highest weights
+    const aggregateList = document.getElementById('aggregate-list');
+    aggregateList.innerHTML = '';
+    for (const [exercise, weight] of Object.entries(highestWeights)) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${exercise}: ${weight} lbs`;
+        aggregateList.appendChild(listItem);
+    }
+});
 });
 
 // Attach function to the window object to make it globally accessible

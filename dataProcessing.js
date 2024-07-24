@@ -137,6 +137,11 @@ function processSpecificMuscleSetCounts(data) {
 function displayCounters(stats) {
     const countersDiv = document.getElementById('counters');
 
+    if (!countersDiv) {
+        console.warn('Counters element not found.');
+        return;
+    }
+
     const startDate = new Date('2024-04-04');
     const endDate = new Date();
     const totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth()) + 1;

@@ -45,17 +45,13 @@ async function fetchAIInsights() {
 function displayInsights(insights) {
     const insightsContent = document.getElementById('insights-content');
     insightsContent.innerHTML = '';
-    
-    const bulletPoints = insights.split('\n').filter(point => point.trim() !== '');
-    const ul = document.createElement('ul');
-    
-    bulletPoints.forEach(point => {
-        const li = document.createElement('li');
-        li.textContent = point;
-        ul.appendChild(li);
-    });
 
-    insightsContent.appendChild(ul);
+    const bulletPoints = insights.split('\n').filter(point => point.trim() !== '');
+    bulletPoints.forEach(point => {
+        const p = document.createElement('p');
+        p.textContent = point.replace(/^- /, ''); // Remove the leading bullet point character
+        insightsContent.appendChild(p);
+    });
 }
 
 async function refreshInsights() {

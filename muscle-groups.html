@@ -11,18 +11,28 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <div id="navbar"></div> <!-- Placeholder for the navbar -->
+    <div id="navbar"></div>
     <main>
         <div class="content-container">
             <h1 class="dashboard-title">Muscle Groups</h1>
-            <!-- Your muscle groups content goes here -->
-            <canvas id="muscleGroupsChart"></canvas>
-            <div id="muscleGroupChartsContainer" class="scroll-container"></div>
+            <canvas id="muscleGroupPieChart"></canvas>
         </div>
     </main>
-    <script src="navbar.js"></script> <!-- Include the navbar.js script -->
+    <div id="footer-placeholder"></div> 
+    <script src="navbar.js"></script>
     <script src="dataProcessing.js"></script>
     <script src="app.js"></script>
-    <script src="muscleGroups.js"></script> <!-- Specific JavaScript file for muscle groups -->
+    <script src="muscleGroups.js"></script>
+    <script>
+        // Load the footer dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
 </body>
 </html>
